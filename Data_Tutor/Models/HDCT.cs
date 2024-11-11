@@ -11,11 +11,11 @@ namespace Data_Tutor.Models
    
     public class HDCT
     {
-        public Guid iD {  get; set; }
+        public Guid Id {  get; set; }
         [ForeignKey("SanPham")]
-        public Guid SanPhamId { get; set; }  // đóng vai trò là khóa ngoại// 1 cùng kiểu dữ liệu vs khóa chính của bảng 1/ 
-        public Guid HoaDonId { get; set; }
-        public decimal TotalMoney {  get; set; }
+        public int? SanPhamId { get; set; }  // đóng vai trò là khóa ngoại// 1 cùng kiểu dữ liệu vs khóa chính của bảng 1/ 
+        public Guid? HoaDonId { get; set; }
+        public decimal? TotalMoney {  get; set; }
         public SanPham? SanPham { get; set; }
         public HoaDon? HoaDon { get; set; }
     

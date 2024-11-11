@@ -8,9 +8,9 @@ namespace Data_Tutor.Models
 {
     public class SanPham
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }    
-        public string ImgUrl {  get; set; }
+        public string? ImgUrl {  get; set; }
 
 
         //thiết lập mqh  1-nn vs ghct

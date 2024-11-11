@@ -10,6 +10,8 @@ namespace Data_Tutor.Models
 {
    public class User
     {
+        //để an toàn thì trừ các khóa chính và 1 số thuộc tính bắt nhập thì cấc bạn cứ để ? để thể hiện 
+        /// để thể hhieejn đc phép null hoặc k
         [Key]
         public Guid Id { get; set; }
         [Required]
@@ -20,7 +22,7 @@ namespace Data_Tutor.Models
         public string Password { get; set; }
 
         //thể hiện mqh 1--1 vs giỏ hàng
-        public GioHang? GioHang { get; set; }  // tự động tạo ra 1 thuộc tính khóa ngoại
+        public GioHang? GioHang { get; set; }  
         //? thể hiện có hoặc k cũng được
 
         //thiết lập mqh 1-n vs bảng hd

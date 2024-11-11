@@ -22,9 +22,11 @@ namespace Data_Tutor.Models
             
         }
         //ctrl + . => generate contructor ...(option)
+
         public TutorDbContext(DbContextOptions options) : base(options)
         {
         }
+
 
         // taoj các dbset
         //db set đại diện cho 1 thực thể  = đại diện cho 1 bảng ở trong csdl
@@ -43,13 +45,37 @@ namespace Data_Tutor.Models
 
         //gắn chuỗi kết nối
         //ctr + . => generate overide => tích OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=NGUYEN_NGOC_HOA\\HOANN; Database=Tutor_So1;Trusted_Connection= True;" +
                                 "TrustServerCertificate=True");
         }
 
-       
+        //nếu muốn fix cứng dữ liệu thì fix bằng cách sau
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //hàm này có nhiều công dụng
+            //nếu muốn fix cứng dữ liệu thì fix ở đâu
+            //.nếu ở class để là guid thì mìnhh sẽ k fix cứng đc dữ liệu mà phải dùng đến phhw[ng pháp gen data tự động
+           
+            modelBuilder.Entity<SanPham>().HasData(
+                new SanPham { Id = 1, Name = "Khoai " },
+                new SanPham { Id = 2, Name = "Sắn " },
+                new SanPham { Id = 3, Name = "Ngô " }
+
+                );
+
+            //.có thể vioieest fulent api ở trong hàm này
+
+        }
+
+        
+
+
+
+
+
 
 
     }
