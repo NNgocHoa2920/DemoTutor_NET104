@@ -68,7 +68,15 @@ namespace Data_Tutor.Models
 
             //.có thể vioieest fulent api ở trong hàm này
 
+            //config cho user
+
+            //modelBuilder.Entity<User>().HasKey(x => x.Id);
+            //modelBuilder.Entity<User>().HasOne(x => x.GioHang).WithOne(x => x.User).HasForeignKey<GioHang>(x => x.UserId);
+           
+
+
         }
+
 
         
 

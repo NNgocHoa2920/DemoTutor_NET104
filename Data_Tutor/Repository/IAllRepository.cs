@@ -16,6 +16,7 @@ namespace Data_Tutor.IRepository
     {
         public ICollection<T> GetAll(); // lấy ra tất cả thông tin của class T
 
+        //tìm kiếm theo id
         public T getByid(dynamic id); // dynamic đại diện cho dateType
 
         //Tạo ms và thêm trong db

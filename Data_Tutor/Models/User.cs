@@ -11,8 +11,11 @@ namespace Data_Tutor.Models
    public class User
     {
         //để an toàn thì trừ các khóa chính và 1 số thuộc tính bắt nhập thì cấc bạn cứ để ? để thể hiện 
+        /// để thể hhieejn đc phép null hoặc k <summary>
         /// để thể hhieejn đc phép null hoặc k
-        [Key]
+        /// Ở trong visual nếu khai báo thuộc tính là Id thì nó sẽ ngầm định hiểu rằng đấy l
+        /// </summary>
+        [Key] 
         public Guid Id { get; set; }
         [Required]
         
